@@ -1,0 +1,41 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev1": "env-cmd ./config/dev.env nodemon src/index.js",
+    "dev": "env-cmd --verbose -f ./config/dev.env nodemon src/index.js",
+    "inc1": "env-cmd ./config/dev.env nodemon --inspect src/index.js",
+    "inc": "env-cmd --verbose -f ./config/dev.env nodemon --inspect src/index.js",
+    "test": "env-cmd --verbose -f ./config/test.env jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-restify-mongoose": "^6.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13",
+    "multer": "^1.4.2",
+    "natives": "^1.1.6",
+    "sharp": "^0.27.1",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
+  }
+}
